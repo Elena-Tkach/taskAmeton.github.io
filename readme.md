@@ -1,5 +1,7 @@
 Тестовое задание от компании Аметон
+
 Выполнила: Ткач Елена 
+
 Резюме: https://docs.google.com/document/d/1dAKd33OFkwvaoR9VSRcKmMDLZsWmh3XGqCQ-5Sc5NRw/edit?usp=sharing
 
 
