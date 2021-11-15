@@ -1,0 +1,185 @@
+.title {
+    margin: 0;
+
+    &--h1 {
+        @include font-style(60px, 900);
+        color: #ffffff;
+
+        @include tablet-768 {
+            font-size: calcFluidFontSize(40, 60, 320, 1280);
+        }
+    }
+
+    &--h2 {
+        @include font-style(40px, 700);
+
+        @include tablet-768 {
+            font-size: calcFluidFontSize(30, 40, 320, 1280);
+        }
+    }
+
+    &--h3 {
+        @include font-style(20px, 500);
+
+        @include tablet-768 {
+            font-size: 18px;
+        }
+    }
+
+    &--delivery {
+        @include font-style(24px, 900);
+
+        @include laptop-1200 {
+            font-size: calcFluidFontSize(18, 24, 320, 1280);
+        }
+    }
+}
+
+.subtitle {
+    margin: 0;
+
+    &--intro {
+        padding: 0 30%;
+        @include font-style(17px, 500);
+        line-height: 1.5;
+        color: #ffffff;
+
+        @include tablet-920 {
+            padding: 0 20%;
+            font-size: calcFluidFontSize(14, 17, 320, 1280);
+        }
+
+        @include tablet-768 {
+            padding: 0 10%;
+        }
+    }
+
+    &--social {
+        @include font-style(15px, 700);
+    }
+
+    &--slide {
+        line-height: 1.4;
+        color: $text-gay;
+        @include font-style(15px, 500);
+
+        @include tablet-768 {
+            font-size: 12px;
+        }
+    }
+
+    &--inform {
+        color: $text-gay;
+        @include font-style(13px, 500);
+    }
+
+    &--delivery {
+        @include font-style(13px, 700);
+    }
+}
+
+.text {
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    @include font-style(15px, 500);
+}
+
+.btn {
+    border: none;
+    outline: none;
+
+    &--round {
+        @include block-size(44px, 44px);
+        background-color: $white;
+        border-radius: 50%;
+    }
+
+    &--green {
+        width: 224px;
+        height: 48px;
+
+        @include font-style(15px, 700);
+        color: $white;
+
+        background: $green;
+        border-radius: $border-radius-address;
+
+        @include mobile-480 {
+            width: 160px;
+        }
+    }
+
+    &__svg {
+        @include block-size(7px, 11px);
+    }
+
+    @include link-hover;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include link-hover;
+    transition: $transition-06;
+
+    &--intro {
+        @include block-size(160px, 48px);
+
+        background: $white;
+        border-radius: $border-radius-address;
+
+        @include tablet-768 {
+            @include block-size(80px, 40px);
+        }
+
+        @include mobile-480 {
+            @include block-size(60px, 40px);
+        }
+
+        @include mobile-320 {
+            @include block-size(50px, 40px);
+        }
+    }
+
+    &--social {
+        @include block-size(56px, 56px);
+
+        background-color: $gray;
+        border-radius: 13.3311px;
+    }
+
+    &--delivery {
+        @include block-size(48px, 48px);
+
+        background-color: $gray;
+        border-radius: 13.3311px;
+    }
+}
+
+.svg {
+    &--social {
+        @include block-size(23px, 23px);
+    }
+
+    &--instagram {
+        @include block-size(19px, 19px);
+    }
+
+    &--zen {
+        @include block-size(36px, 36px);
+    }
+
+    &--intro {
+        @include block-size(14px, 14px);
+    }
+
+    &--delivery {
+        @include block-size(14px, 14px);
+    }
+
+    &--article {
+        @include block-size(24px, 24px);
+    }
+}

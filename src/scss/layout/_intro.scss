@@ -1,0 +1,66 @@
+.intro {
+    position: relative;
+    margin-top: 40px;
+    padding: 40px 0 54px;
+
+    border-radius: $border-radius-section;
+    background: url("img/svg/air.svg") 0 33%, url("img/svg/hand.svg") 100% 100%, $intro-bg;
+    background-repeat: no-repeat;
+
+    @include tablet-768 {
+        border-radius: $border-radius-section-tablet;
+        background: url("img/svg/air.svg") 0 33% no-repeat $intro-bg;
+    }
+}
+
+.intro__wrap {
+    text-align: center;
+}
+
+.intro__title {
+    margin-bottom: 4px;
+    transition: $transition-06;
+}
+
+.intro__subtitle {
+    margin-bottom: 38px;
+    transition: $transition-06;
+}
+
+.address {
+    font-style: normal;
+
+    &__svg--intro {
+        margin-right: 7px;
+
+        @include tablet-768 {
+            margin-right: 0;
+        }
+    }
+
+    &__text {
+        @include font-style(15px, 500);
+
+        @include tablet-768 {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        align-items: center;
+
+        &--intro {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        margin-right: 8px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

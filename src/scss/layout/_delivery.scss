@@ -1,0 +1,40 @@
+.delivery {
+    padding: 16px 0 80px;
+
+    &__subtitle {
+        margin-bottom: 16px;
+    }
+}
+
+.article {
+    margin-bottom: 18px;
+
+    &__wrap {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        margin-right: 3px;
+    }
+
+    &__text {
+        width: 57%;
+
+        @include tablet-920 {
+            width: 80%;
+        }
+
+        @include tablet-768 {
+            width: 100%;
+        }
+    }
+}
+
+.text {
+    &__span {
+        display: inline-block;
+    }
+}

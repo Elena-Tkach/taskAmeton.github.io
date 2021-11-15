@@ -1,0 +1,76 @@
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin font-style($size, $weight) {
+    font-size: #{$size};
+    font-weight: #{$weight};
+}
+
+@mixin block-size($width, $height) {
+    width: #{$width};
+    height: #{$height};
+}
+
+@function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) {
+    $k: ($f-max - $f-min)/ ($v-max - $v-min);
+    $b: $f-min - $k * $v-min;
+
+    $b: $b * 1px;
+
+    @return calc(#{$k} * 100vw + #{$b});
+}
+
+@mixin link-hover {
+    transition: $transition-06;
+    
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: $link-hover;
+    }
+}
+
+@mixin mobile-320 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mobile-480 {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet-768 {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet-920 {
+    @media (max-width: 920px) {
+        @content;
+    }
+}
+
+@mixin tabletS-1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin laptop-1200 {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin laptop-1280 {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
